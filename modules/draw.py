@@ -32,7 +32,7 @@ def draw_element_id(element_id, img, text_color):
     draw_pic.text(
         (
             (settings.pic.size - text_w) / 2,
-            ((settings.pic.size - name_font_size) / 2 - text_w) / 2,
+            ((settings.pic.size - name_font_size) / 2 - text_w / 2) / 2,
         ), element_id, fill=text_color, font=fnt)
     return img
 
@@ -50,12 +50,12 @@ def draw_element_desc(element_full_name, element_mass, img, text_color):
     draw_pic.text(
         (
             (settings.pic.size - text_w) / 2,
-            settings.pic.size - ((settings.pic.size - name_font_size) / 2) - text_h / 2,
+            settings.pic.size - ((settings.pic.size - name_font_size) / 2) - text_h,
         ), element_full_name, fill=text_color, font=fnt)
     text_w, _ = draw_pic.textsize(element_mass, font=fnt)
     draw_pic.text(
         (
             (settings.pic.size - text_w) / 2,
-            settings.pic.size - ((settings.pic.size - name_font_size) / 2) + text_h / 2,
+            settings.pic.size - ((settings.pic.size - name_font_size) / 2) + text_h / 3,
         ), element_mass, fill=text_color, font=fnt)
     return img
